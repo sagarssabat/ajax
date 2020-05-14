@@ -9,7 +9,7 @@
 
 <body>
     <button type="button" id="getUser">Get User</button>
-    <button type="button" id="getUsers">Get User</button>
+    <button type="button" id="getUsers">Get Users</button>
     <div>
         <h1>User</h1>
         <p id="printUser"></p>
@@ -27,21 +27,14 @@
             xhr.onload = function () {
                 if (this.status == 200) {
                     var user = JSON.parse(this.responseText);
-
                     var output = '';
-
-                    output += '<ul>' +
-                        '<li>ID: '+ user.id +'</li>' +
-                        '<li>Name: '+ user.name +'</li>' +
-                        '<li>Email: '+ user.email +'</li>' +
-                    '</ul>'
-
+                    output += '<ul>' + '<li>ID: ' + user.id + '</li>' + '<li>Name: ' + user.name + '</li>' +
+                        '<li>Email: ' + user.email + '</li>' + '</ul>'
                     document.getElementById('printUser').innerHTML = output;
                 }
             }
             xhr.send();
         }
-
         document.getElementById('getUsers').addEventListener('click', loadUsers);
 
         function loadUsers() {
@@ -50,21 +43,17 @@
             xhr.onload = function () {
                 if (this.status == 200) {
                     var users = JSON.parse(this.responseText);
-
                     var output = '';
-                    for(var i in users){
-                        output += '<ul>' +
-                            '<li>ID: '+ users[i].id +'</li>' +
-                            '<li>Name: '+ users[i].name +'</li>' +
-                            '<li>Email: '+ users[i].email +'</li>' +
-                        '</ul>'
+                    for (var i in users) {
+                        output += '<ul>' + '<li>ID: ' + users[i].id + '</li>' + '<li>Name: ' + users[i].name +
+                            '</li>' + '<li>Email: ' + users[i].email + '</li>' + '</ul>'
                     }
-
                     document.getElementById('printUsers').innerHTML = output;
                 }
             }
             xhr.send();
         }
+
     </script>
 </body>
 
