@@ -1,6 +1,6 @@
 # AJAX (Vanilla JavaScript)
 
-xhr requests to a txt file, local json files and external API
+xhr requests to a txt file, local json files and external API/Multiple API's
 
 ## Ready state values
 
