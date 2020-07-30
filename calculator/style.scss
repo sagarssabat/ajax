@@ -1,0 +1,72 @@
+// Reboot styles
+html {
+  height: 100%;
+}
+
+body {
+  font-family: monospace;
+  background-color: #3b3939;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// Reboot styles End
+
+.calc {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+
+  &-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      width: 24.5%;
+      padding: 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+      background-color: #ffffff;
+      border-radius: 0px;
+      transition: 0.2s;
+
+      &-operator {
+        color: #66009a;
+        font-weight: 700;
+      }
+
+      &-number {
+        &:hover {
+          background-color: #dbdbdb;
+        }
+      }
+
+      &-operator {
+
+        &:hover {
+          background-color: rgba(102, 0, 154, 0.2);
+        }
+      }
+    }
+  }
+
+  .custom-input {
+    min-height: 100px;
+    font-size: 34px;
+
+    &:focus {
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+}
